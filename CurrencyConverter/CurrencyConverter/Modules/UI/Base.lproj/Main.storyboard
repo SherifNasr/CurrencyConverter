@@ -29,10 +29,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-be-jIz" customClass="GradientView" customModule="CurrencyConverter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="327"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dM8-60-gun">
-                                        <rect key="frame" x="147" y="168" width="120" height="120"/>
+                                        <rect key="frame" x="147" y="128" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="aYE-8h-k99"/>
                                             <constraint firstAttribute="width" secondItem="dM8-60-gun" secondAttribute="height" multiplier="1:1" id="x4i-QD-b9i"/>
@@ -44,7 +44,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kb-Lv-M19">
-                                        <rect key="frame" x="192.5" y="298" width="29.5" height="19"/>
+                                        <rect key="frame" x="192.5" y="258" width="29.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3L6-Hb-4PZ">
-                                <rect key="frame" x="0.0" y="327" width="414" height="535"/>
+                                <rect key="frame" x="0.0" y="287" width="414" height="575"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyRateCell" rowHeight="81" id="UT0-1h-Bc3" customClass="CurrencyRateCell" customModule="CurrencyConverter" customModuleProvider="target">
@@ -157,7 +157,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3L6-Hb-4PZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BJn-1H-peA"/>
-                            <constraint firstItem="dM8-60-gun" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Rrk-dF-O8v"/>
+                            <constraint firstItem="dM8-60-gun" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Rrk-dF-O8v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3L6-Hb-4PZ" secondAttribute="trailing" id="ekW-G3-v8m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3L6-Hb-4PZ" secondAttribute="bottom" id="fP9-8T-Ipw"/>
                             <constraint firstItem="Ygz-be-jIz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fjH-tD-B2c"/>

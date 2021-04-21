@@ -19,15 +19,22 @@ class ChangeCurrencyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initData()
+    }
+    
+    private func initData(){
         baseCodeLabel.text = viewModel?.baseCode
         resultCodeLabel.text = viewModel?.requiredCode
         baseValueTextField.text = "1.00"
-        resultValueLabel.text = "\(viewModel?.rate ?? 0.00)"
+        let rate = String(format: "%.2f", (viewModel?.rate ?? 0.00))
+        resultValueLabel.text = rate
     }
         
     @IBAction func baseValueDidChange(_ sender: UITextField) {
-        guard let baseVal = Double(baseValueTextField.text ?? "")  else {return}
-        resultValueLabel.text = "\(viewModel?.changeCurrency(of: baseVal) ?? 0.0)"
+        guard let baseVal = Double(baseValueTextField.text ?? ""),
+              let viewModel = viewModel else {return}
+        let result = String(format: "%.2f", viewModel.changeCurrency(of: baseVal))
+        resultValueLabel.text = result
     }
     
 }
