@@ -12,6 +12,7 @@ class CurrencyRatesViewModel: ObservableObject {
     
     @Published var base: String = ""
     @Published var rates:[CurrencyRate] = []
+    @Published var error: MyError?
     
     func getRates(){
         RequestManager.beginRequest(with: CurrencyProvider.latestRates,
@@ -24,6 +25,8 @@ class CurrencyRatesViewModel: ObservableObject {
                     tempRates.append(CurrencyRate(code: key, rate: value))
                 }
                 self?.rates = tempRates
+            } else {
+                self?.error = error
             }
         }
     }

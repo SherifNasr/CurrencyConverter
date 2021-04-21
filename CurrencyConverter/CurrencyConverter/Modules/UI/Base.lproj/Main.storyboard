@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
         </array>
@@ -26,10 +29,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-be-jIz" customClass="GradientView" customModule="CurrencyConverter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="313.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="367"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dM8-60-gun">
-                                        <rect key="frame" x="147" y="97" width="120" height="120"/>
+                                        <rect key="frame" x="147" y="168" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="aYE-8h-k99"/>
                                             <constraint firstAttribute="width" secondItem="dM8-60-gun" secondAttribute="height" multiplier="1:1" id="x4i-QD-b9i"/>
@@ -40,8 +43,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kb-Lv-M19">
-                                        <rect key="frame" x="187.5" y="227" width="39" height="36.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kb-Lv-M19">
+                                        <rect key="frame" x="192.5" y="298" width="29.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -49,7 +52,6 @@
                                 </subviews>
                                 <color key="backgroundColor" name="CCBlue"/>
                                 <constraints>
-                                    <constraint firstItem="dM8-60-gun" firstAttribute="centerY" secondItem="Ygz-be-jIz" secondAttribute="centerY" id="1rs-gi-uSy"/>
                                     <constraint firstItem="0kb-Lv-M19" firstAttribute="centerX" secondItem="Ygz-be-jIz" secondAttribute="centerX" id="kKL-d9-ciZ"/>
                                     <constraint firstItem="0kb-Lv-M19" firstAttribute="top" secondItem="dM8-60-gun" secondAttribute="bottom" constant="10" id="ozB-Tc-6YT"/>
                                     <constraint firstItem="dM8-60-gun" firstAttribute="centerX" secondItem="Ygz-be-jIz" secondAttribute="centerX" id="zQn-N0-fdu"/>
@@ -72,7 +74,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3L6-Hb-4PZ">
-                                <rect key="frame" x="0.0" y="317.5" width="414" height="544.5"/>
+                                <rect key="frame" x="0.0" y="327" width="414" height="535"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyRateCell" rowHeight="81" id="UT0-1h-Bc3" customClass="CurrencyRateCell" customModule="CurrencyConverter" customModuleProvider="target">
@@ -152,16 +154,16 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3L6-Hb-4PZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BJn-1H-peA"/>
-                            <constraint firstItem="3L6-Hb-4PZ" firstAttribute="top" secondItem="Ygz-be-jIz" secondAttribute="bottom" constant="-40" id="IpA-yB-YFT"/>
+                            <constraint firstItem="dM8-60-gun" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Rrk-dF-O8v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3L6-Hb-4PZ" secondAttribute="trailing" id="ekW-G3-v8m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3L6-Hb-4PZ" secondAttribute="bottom" id="fP9-8T-Ipw"/>
                             <constraint firstItem="Ygz-be-jIz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fjH-tD-B2c"/>
                             <constraint firstItem="3L6-Hb-4PZ" firstAttribute="top" secondItem="0kb-Lv-M19" secondAttribute="bottom" constant="10" id="fqA-2s-OJq"/>
-                            <constraint firstItem="Ygz-be-jIz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oVY-gx-R3I"/>
-                            <constraint firstItem="Ygz-be-jIz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="tPl-uU-KWh"/>
+                            <constraint firstItem="Ygz-be-jIz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oVY-gx-R3I"/>
+                            <constraint firstItem="3L6-Hb-4PZ" firstAttribute="top" secondItem="Ygz-be-jIz" secondAttribute="bottom" constant="-40" id="u28-uY-Vqd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ygz-be-jIz" secondAttribute="trailing" id="xUc-Ko-R3r"/>
                         </constraints>
                     </view>
@@ -176,16 +178,112 @@
             </objects>
             <point key="canvasLocation" x="713.04347826086962" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Currency View Controller-->
         <scene sceneID="9WT-ew-OfL">
             <objects>
-                <viewController id="qRJ-Qj-kQE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeCurrencyViewController" id="qRJ-Qj-kQE" customClass="ChangeCurrencyViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNl-2E-vd9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pD-sp-jRM" customClass="GradientView" customModule="CurrencyConverter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xGF-hr-6AX">
+                                        <rect key="frame" x="20" y="140" width="374" height="39"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1du-7g-26D">
+                                                <rect key="frame" x="0.0" y="0.0" width="315.5" height="39"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="baseValueDidChange:" destination="qRJ-Qj-kQE" eventType="editingChanged" id="XhG-yn-8Id"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmN-D1-5Zo">
+                                                <rect key="frame" x="327.5" y="0.0" width="46.5" height="39"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8z-zD-eCv" userLabel="Seprator">
+                                        <rect key="frame" x="0.0" y="199" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="ihU-8M-Laa"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QHg-Dj-B39">
+                                        <rect key="frame" x="20" y="220" width="374" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmZ-DN-KXM">
+                                                <rect key="frame" x="0.0" y="0.0" width="315.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="ERU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-Is-CYP">
+                                                <rect key="frame" x="327.5" y="0.0" width="46.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ELc-Pz-eal"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Z8z-zD-eCv" firstAttribute="top" secondItem="xGF-hr-6AX" secondAttribute="bottom" constant="20" id="JoL-1p-n3N"/>
+                                    <constraint firstAttribute="trailing" secondItem="xGF-hr-6AX" secondAttribute="trailing" constant="20" id="Xch-5r-6Qa"/>
+                                    <constraint firstAttribute="trailing" secondItem="QHg-Dj-B39" secondAttribute="trailing" constant="20" id="ZNa-n5-yQ4"/>
+                                    <constraint firstItem="xGF-hr-6AX" firstAttribute="top" secondItem="1pD-sp-jRM" secondAttribute="top" constant="140" id="aZz-ax-cwl"/>
+                                    <constraint firstItem="xGF-hr-6AX" firstAttribute="leading" secondItem="1pD-sp-jRM" secondAttribute="leading" constant="20" id="dwa-dt-Xs2"/>
+                                    <constraint firstItem="QHg-Dj-B39" firstAttribute="leading" secondItem="1pD-sp-jRM" secondAttribute="leading" constant="20" id="oDP-fU-LD1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z8z-zD-eCv" secondAttribute="trailing" id="u0O-Xh-SBZ"/>
+                                    <constraint firstItem="QHg-Dj-B39" firstAttribute="top" secondItem="Z8z-zD-eCv" secondAttribute="bottom" constant="20" id="vNj-vK-l32"/>
+                                    <constraint firstItem="Z8z-zD-eCv" firstAttribute="leading" secondItem="1pD-sp-jRM" secondAttribute="leading" id="wE0-We-O9v"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" name="CCBlue"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" name="CCDarkBlue"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NFu-aO-gKA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NFu-aO-gKA" firstAttribute="trailing" secondItem="1pD-sp-jRM" secondAttribute="trailing" id="Atf-Kp-mEg"/>
+                            <constraint firstItem="1pD-sp-jRM" firstAttribute="leading" secondItem="NFu-aO-gKA" secondAttribute="leading" id="Qwg-48-nmm"/>
+                            <constraint firstItem="1pD-sp-jRM" firstAttribute="top" secondItem="xNl-2E-vd9" secondAttribute="top" id="mSp-io-Uko"/>
+                            <constraint firstItem="NFu-aO-gKA" firstAttribute="bottom" secondItem="1pD-sp-jRM" secondAttribute="bottom" id="tR5-co-E0f"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="baseCodeLabel" destination="nmN-D1-5Zo" id="XxF-D7-DVJ"/>
+                        <outlet property="baseValueTextField" destination="1du-7g-26D" id="Jf9-bi-NDT"/>
+                        <outlet property="resultCodeLabel" destination="5v6-Is-CYP" id="JIm-PI-MMv"/>
+                        <outlet property="resultValueLabel" destination="rmZ-DN-KXM" id="soA-G4-Wb7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efd-LD-QLo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,10 +292,13 @@
         <!--Navigation Controller-->
         <scene sceneID="dEs-1L-TK8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Elf-kQ-Jol" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Elf-kQ-Jol" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jkt-fp-XMG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

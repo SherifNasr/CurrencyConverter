@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 import Combine
 import FlagKit
 
@@ -35,13 +34,22 @@ class CurrencyRatesViewController: UIViewController {
         
         viewModel.$rates
             .receive(on: DispatchQueue.main).sink {[unowned self] (rates) in
-                MBProgressHUD.hide(for: view, animated: true)
+                hideLoading()
                 self.currencyRatesTableView.reloadData()
             }.store(in: &disposeBag)
+        
+        viewModel.$error
+            .receive(on: DispatchQueue.main).sink {[unowned self] (error) in
+                if let error = error {
+                    hideLoading()
+                    showAlert(title: "Error", message: error.message ?? "")
+                }
+            }.store(in: &disposeBag)
+
     }
     
     private func loadData(){
-        MBProgressHUD().show(animated: true)
+        showLoading()
         viewModel.getRates()
     }
 
@@ -53,7 +61,7 @@ extension CurrencyRatesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UIConstants.Cells.CurrencyRateCell) as! CurrencyRateCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: UIConstants.Cells.currencyRateCell) as! CurrencyRateCell
         cell.setup(title: viewModel.code(at: indexPath.row),
                    rate: "\(viewModel.rate(at: indexPath.row) ?? 0.0)")
         return cell
@@ -62,5 +70,13 @@ extension CurrencyRatesViewController: UITableViewDataSource {
 }
 
 extension CurrencyRatesViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let rate = viewModel.rate(at: indexPath.row),
+              let changeCurrencyVC = ViewController.changeCurrency(storyboard: .main).instance as? ChangeCurrencyViewController else {return}
+        let changeCurrencyViewModel = ChangeCurrencyViewModel(rate: rate,
+                                                              baseCode: viewModel.base,
+                                                              requiredCode: viewModel.code(at: indexPath.row))
+        changeCurrencyVC.viewModel = changeCurrencyViewModel
+        navigationController?.pushViewController(changeCurrencyVC, animated: true)
+    }
 }

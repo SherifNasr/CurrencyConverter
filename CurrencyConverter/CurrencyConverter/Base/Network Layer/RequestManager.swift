@@ -12,7 +12,7 @@ class RequestManager {
     
     static func beginRequest<C: Codable, T: TargetType>(with target:T,
                                                         responseModel model:C.Type,
-                                                        completion handler: @escaping (_ data: Any?, _ error: Error?) -> () ){
+                                                        completion handler: @escaping (_ data: Any?, _ error: MyError?) -> () ){
         let provider = MoyaProvider<T>()
         provider.request(target) { (result) in
             switch result {
@@ -29,8 +29,12 @@ class RequestManager {
                 }
                 
             case let .failure(error):
-                print("error:: \(error)") // to be monitored by dev team
-                handler(nil, MyError.generalError) // to be shown to user
+                if error.errorCode == -1009 {
+                    handler(nil, MyError.offline)
+                } else {
+                    print("error:: \(error)") // to be monitored by dev team
+                    handler(nil, MyError.generalError) // to be shown to user
+                }
             }
         }
     }

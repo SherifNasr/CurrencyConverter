@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49802D28263032BC00F6A008 /* ChangeCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49802D27263032BC00F6A008 /* ChangeCurrencyViewController.swift */; };
+		49802D2B2630334000F6A008 /* ChangeCurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49802D2A2630334000F6A008 /* ChangeCurrencyViewModel.swift */; };
+		49802D2E263033BE00F6A008 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49802D2D263033BE00F6A008 /* UIViewControllerExtension.swift */; };
+		49802D312630520F00F6A008 /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49802D302630520F00F6A008 /* UINavigationBarExtension.swift */; };
 		49A9D14A262F9BF8001B5059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9D149262F9BF8001B5059 /* AppDelegate.swift */; };
 		49A9D14C262F9BF8001B5059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9D14B262F9BF8001B5059 /* SceneDelegate.swift */; };
 		49A9D14E262F9BF8001B5059 /* CurrencyRatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9D14D262F9BF8001B5059 /* CurrencyRatesViewController.swift */; };
@@ -33,6 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49802D27263032BC00F6A008 /* ChangeCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCurrencyViewController.swift; sourceTree = "<group>"; };
+		49802D2A2630334000F6A008 /* ChangeCurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCurrencyViewModel.swift; sourceTree = "<group>"; };
+		49802D2D263033BE00F6A008 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		49802D302630520F00F6A008 /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
 		49A9D146262F9BF8001B5059 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9D149262F9BF8001B5059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A9D14B262F9BF8001B5059 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +140,8 @@
 				49A9D16E262F9D78001B5059 /* UIColorExtension.swift */,
 				49A9D16F262F9D78001B5059 /* UIViewExtension.swift */,
 				49A9D1D4262FD364001B5059 /* LocaleExtension.swift */,
+				49802D2D263033BE00F6A008 /* UIViewControllerExtension.swift */,
+				49802D302630520F00F6A008 /* UINavigationBarExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				49A9D14D262F9BF8001B5059 /* CurrencyRatesViewController.swift */,
+				49802D27263032BC00F6A008 /* ChangeCurrencyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -214,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				49A9D1C6262FBEFD001B5059 /* CurrencyRatesViewModel.swift */,
+				49802D2A2630334000F6A008 /* ChangeCurrencyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -353,11 +365,15 @@
 				49A9D1C4262FBD71001B5059 /* CurrencyRateCell.swift in Sources */,
 				49A9D178262F9D78001B5059 /* MyError.swift in Sources */,
 				49A9D1C7262FBEFD001B5059 /* CurrencyRatesViewModel.swift in Sources */,
+				49802D312630520F00F6A008 /* UINavigationBarExtension.swift in Sources */,
+				49802D2B2630334000F6A008 /* ChangeCurrencyViewModel.swift in Sources */,
+				49802D28263032BC00F6A008 /* ChangeCurrencyViewController.swift in Sources */,
 				49A9D14E262F9BF8001B5059 /* CurrencyRatesViewController.swift in Sources */,
 				49A9D186262FA057001B5059 /* CurrencyResponse.swift in Sources */,
 				49A9D14A262F9BF8001B5059 /* AppDelegate.swift in Sources */,
 				49A9D177262F9D78001B5059 /* RequestManager.swift in Sources */,
 				49A9D1D5262FD364001B5059 /* LocaleExtension.swift in Sources */,
+				49802D2E263033BE00F6A008 /* UIViewControllerExtension.swift in Sources */,
 				49A9D14C262F9BF8001B5059 /* SceneDelegate.swift in Sources */,
 				49A9D175262F9D78001B5059 /* UIColorExtension.swift in Sources */,
 			);
