@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'CurrencyConverter' do
+
+  pod 'Moya'
+  pod 'MBProgressHUD'
+  pod 'FlagKit'
+
+end

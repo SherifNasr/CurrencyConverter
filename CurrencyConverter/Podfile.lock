@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (5.4.1)
+  - FlagKit (2.2)
+  - MBProgressHUD (1.2.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+
+DEPENDENCIES:
+  - FlagKit
+  - MBProgressHUD
+  - Moya
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FlagKit
+    - MBProgressHUD
+    - Moya
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  FlagKit: eca7dc89064b0c986302ba9acefad1bf80a435b1
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+
+PODFILE CHECKSUM: e7382bf815120ea43942a4f2974fa7f0a82becd0
+
+COCOAPODS: 1.10.0
