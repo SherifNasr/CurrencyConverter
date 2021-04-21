@@ -62,8 +62,9 @@ extension CurrencyRatesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UIConstants.Cells.currencyRateCell) as! CurrencyRateCell
+        let rateString = String(format: "%.2f", (viewModel.rate(at: indexPath.row) ?? 0.0))
         cell.setup(title: viewModel.code(at: indexPath.row),
-                   rate: "\(viewModel.rate(at: indexPath.row) ?? 0.0)")
+                   rate: rateString)
         return cell
     }
     
