@@ -13,6 +13,11 @@ class RequestManager {
     static func beginRequest<C: Codable, T: TargetType>(with target:T,
                                                         responseModel model:C.Type,
                                                         completion handler: @escaping (_ data: Any?, _ error: MyError?) -> () ){
+        if !Connectivity.isConnectedToInternet {
+            handler(nil, MyError.offline)
+            return
+        }
+        
         let provider = MoyaProvider<T>()
         provider.request(target) { (result) in
             switch result {
@@ -29,12 +34,8 @@ class RequestManager {
                 }
                 
             case let .failure(error):
-                if error.errorCode == -1009 {
-                    handler(nil, MyError.offline)
-                } else {
-                    print("error:: \(error)") // to be monitored by dev team
-                    handler(nil, MyError.generalError) // to be shown to user
-                }
+                print("error:: \(error)") // to be monitored by dev team
+                handler(nil, MyError.generalError) // to be shown to user
             }
         }
     }
